@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Habit Tracker</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Habit Tracker</h1>
+    <form id="habit-form">
+      <input id="habit-input" type="text" placeholder="Add a new habit (e.g., Read 20 mins)" required>
+      <button type="submit">Add</button>
+    </form>
+
+    <section id="habit-list"></section>
+
+    <footer>
+      <button id="export-btn" title="Download your data as JSON">Export Data</button>
+      <button id="clear-btn" title="Clear all data">Clear All</button>
+    </footer>
+  </main>
+
+  <template id="habit-template">
+    <article class="habit">
+      <div class="habit-header">
+        <h2 class="habit-title"></h2>
+        <button class="delete-btn" aria-label="Delete habit">×</button>
+      </div>
+      <div class="days"></div>
+    </article>
+  </template>
+
+  <script src="app.js"></script>
+</body>
+</html>
